@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Icon="Pac.ico"
+        ResizeMode="CanResize"
+        SizeToContent="WidthAndHeight">
     <Grid>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="330,135,0,0" VerticalAlignment="Top" Click="button_Click"/>
-        
+        <Button Content="Canvia Icona" FontSize="30" Click="CanviaIcona" HorizontalAlignment="Left" />
     </Grid>
 </Window>

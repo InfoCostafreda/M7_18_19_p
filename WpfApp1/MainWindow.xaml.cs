@@ -18,14 +18,40 @@ namespace WpfApp1
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
+    /// 
+    
+
     public partial class MainWindow : Window
     {
+        int imatge;
+
         public MainWindow()
         {
             InitializeComponent();
-            Uri iconUri = new Uri("pack://application:,,,/Icon1.ico", UriKind.RelativeOrAbsolute);
-            this.Icon = BitmapFrame.Create(iconUri);
+            imatge = 0;
         }
 
+        private void CanviaIcona(object sender, RoutedEventArgs e)
+        {
+            if (imatge == 0)
+            {
+                Uri iconUri = new Uri("pack://application:,,,/paca.ico", UriKind.RelativeOrAbsolute);
+                this.Icon = BitmapFrame.Create(iconUri);
+                imatge = 1;
+            }
+            else if (imatge == 1)
+            {
+                Uri iconUri = new Uri("pack://application:,,,/fan.ico", UriKind.RelativeOrAbsolute);
+                this.Icon = BitmapFrame.Create(iconUri);
+                imatge = 2;
+            }
+            else if (imatge == 2)
+            {
+                Uri iconUri = new Uri("pack://application:,,,/pac.ico", UriKind.RelativeOrAbsolute);
+                this.Icon = BitmapFrame.Create(iconUri);
+                imatge = 0;
+            }
+
+        }
     }
 }
